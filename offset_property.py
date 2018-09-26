@@ -2,10 +2,10 @@
 import argparse
 from waapi import WaapiClient
 
-parser = argparse.ArgumentParser(description='Increase or lower the volume of the objects.')
+parser = argparse.ArgumentParser(description='Offset a property value for a list of objects. By default, it increases the volume of the specified objects.')
 parser.add_argument('id', nargs='+', help='An object ID (GUID)')
-parser.add_argument("-p", "--property", default='Volume', help="Specify the property to modify (default='Volume')")
-parser.add_argument("-o", "--offset", type=float, default=1, help="Specify the offset to apply (default=1)")
+parser.add_argument("-p", "--property", default='Volume', help="specify the property name to modify (default=Volume)")
+parser.add_argument("-o", "--offset", type=float, default=1, help="specify the offset value to apply (default=1)")
 args = parser.parse_args()
 
 # Connect (default URL)
