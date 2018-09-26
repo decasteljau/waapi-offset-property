@@ -1,0 +1,22 @@
+{
+    "commands": [
+        {
+            "id": "ak.increase_volume",
+            "displayName": "Increase Volume",
+            "defaultShortcut": "=",
+            "program": "pyw",
+            "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
+            "args": "C:\\dev\\python-waapi\\offsetProperty.py ${id}",
+            "contextMenu": {}
+        }, 
+        {
+            "id": "ak.decrease_volume",
+            "displayName": "Increase Volume",
+            "defaultShortcut": "-",
+            "program": "pyw",
+            "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
+            "args": "C:\\dev\\python-waapi\\offsetProperty.py ${id} -o \"-1\"",
+            "contextMenu": {}
+        }
+    ]
+}
