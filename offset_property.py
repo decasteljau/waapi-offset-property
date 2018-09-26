@@ -8,26 +8,28 @@ parser.add_argument("-p", "--property", default='Volume', help="specify the prop
 parser.add_argument("-o", "--offset", type=float, default=1, help="specify the offset value to apply (default=1)")
 args = parser.parse_args()
 
+accessor = '@'+args.property
+
 # Connect (default URL)
-client = WaapiClient()
+with WaapiClient() as client:
 
-# Retrieve the volumes for the selected objects
-query = { 'from': { 'id': args.id }}
-options = { 'return': ['id', '@'+args.property]}
-result = client.call("ak.wwise.core.object.get", query, options=options)
+    # Retrieve the volumes for the selected objects
+    query = { 'from': { 'id': args.id }}
+    options = { 'return': ['id', accessor]}
+    result = client.call("ak.wwise.core.object.get", query, options=options)
 
-client.call("ak.wwise.core.undo.beginGroup")
+    # Make sure all of our set property calls are regrouped undo a single undo
+    client.call("ak.wwise.core.undo.beginGroup")
 
-# Set new volumes
-for object in result['return']:
-    setPropertyArgs = {
-        'object': object['id'],
-        'property': args.property,
-        'value': object['@' + args.property] + args.offset
-        }
-    client.call("ak.wwise.core.object.setProperty", setPropertyArgs)
+    # Set new volumes
+    for object in result['return']:
+        if accessor in object:
+            setPropertyArgs = {
+                'object': object['id'],
+                'property': args.property,
+                'value': object[accessor] + args.offset
+                }
+            client.call("ak.wwise.core.object.setProperty", setPropertyArgs)
 
-client.call("ak.wwise.core.undo.endGroup",displayName='Offset '+args.property)
+    client.call("ak.wwise.core.undo.endGroup",displayName='Offset '+args.property)
 
-# Disconnect
-client.disconnect()

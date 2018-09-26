@@ -6,7 +6,7 @@
             "defaultShortcut": "=",
             "program": "pyw",
             "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
-            "args": "C:\\dev\\python-waapi\\offsetProperty.py ${id}",
+            "args": "C:\\dev\\python-waapi\\offset_property.py ${id}",
             "contextMenu": {}
         }, 
         {
@@ -15,7 +15,7 @@
             "defaultShortcut": "-",
             "program": "pyw",
             "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
-            "args": "C:\\dev\\python-waapi\\offsetProperty.py ${id} -o \"-1\"",
+            "args": "C:\\dev\\python-waapi\\offset_property.py ${id} -o \"-1\"",
             "contextMenu": {}
         }
     ]
