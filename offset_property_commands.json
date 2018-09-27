@@ -11,7 +11,7 @@
         }, 
         {
             "id": "ak.decrease_volume",
-            "displayName": "Increase Volume",
+            "displayName": "Decrease Volume",
             "defaultShortcut": "-",
             "program": "pyw",
             "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
