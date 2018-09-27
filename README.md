@@ -1,6 +1,8 @@
 # Wwise Offset Property
 
-This script offsets a property value for a list of Wwise objects. By default, it increases the volume of the specified objects. the script takes a list of object IDs.
+This script offsets a property value for a list of Wwise objects using WAAPI. By default, it increases the volume of the specified objects. the script takes a list of object IDs.
+
+Learn more about [WAAPI](https://www.audiokinetic.com/library/edge/?source=SDK&id=waapi.html). 
 
 ## Requirements
 
