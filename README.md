@@ -39,7 +39,7 @@ py offset_property.py "{7BE98EBA-AF1C-4D1B-99B8-D6E8AED51929}" "{2892D2CD-05B8-4
 Using Wwise 2018.1.2 or higher
 1. Copy the file `offset_property_commands.json` to:
     * **Windows**: %appdata%\Audiokinetic\Wwise\Add-ons\Commands
-    * **Mac**: /Users/brodrigue/Library/Application Support/Wwise2018/Bottles/wwise/drive_c/users/crossover/Application Data/Audiokinetic/Wwise/Add-ons/Commands
+    * **Mac**: ~/Library/Application Support/Wwise2018/Bottles/wwise/drive_c/users/crossover/Application Data/Audiokinetic/Wwise/Add-ons/Commands
 1. Fix the path to `offset_property.py`
 1. Restart Wwise
 1. Select objects, and use the keys `-` or `=` to increase or decrease volume.
