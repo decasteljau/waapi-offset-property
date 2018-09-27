@@ -42,4 +42,4 @@ Using Wwise 2018.1.2 or higher
     * **Mac**: /Users/brodrigue/Library/Application Support/Wwise2018/Bottles/wwise/drive_c/users/crossover/Application Data/Audiokinetic/Wwise/Add-ons/Commands
 1. Fix the path to `offset_property.py`
 1. Restart Wwise
-1. Select objects, and use the keys `[` or `=` to increase or decrease volume.
+1. Select objects, and use the keys `-` or `=` to increase or decrease volume.
